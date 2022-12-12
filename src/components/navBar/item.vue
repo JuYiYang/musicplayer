@@ -27,7 +27,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, reactive } from "vue";
 import IconPark from "@/components/iconPark/index.vue";
 import { useMenu } from "./useMenu";
 

@@ -25,4 +25,8 @@ import player from "@/components/player/index.vue";
   // height: 100%;
   min-height: 100vh;
 }
+.el-footer {
+  padding: 0rem;
+  height: 8rem;
+}
 </style>

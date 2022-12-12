@@ -1,17 +1,19 @@
 <template>
   <div class="searchBar">
     <div class="searchBar--left">
-      <operationVue />
+      <operationVue/>
     </div>
     <div class="user--info">
-      <userOper />
+      <userOper/>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
+
 import operationVue from "./left/operation.vue";
 import userOper from "./userRight/index.vue";
+
 </script>
 
 <style lang="less" scoped>
