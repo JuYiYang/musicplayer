@@ -82,7 +82,7 @@ const rules = reactive<FormRules>({
   ],
 });
 
-const showDialog = ref(true);
+const showDialog = ref(false);
 
 const ruleFormRef = ref();
 

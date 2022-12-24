@@ -68,7 +68,9 @@ const init = async () => {
   poll.value = setInterval(async () => {
     const { code, cookie } = await getQrLoginStatus({ key: qrKey.value });
     qrStatus.value = code;
-    if (cookie != "") userStore.setCookie(cookie as string);
+    console.log(code, cookie);
+
+    if (cookie) userStore.setCookie(cookie);
   }, 5000);
 };
 

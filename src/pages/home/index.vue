@@ -6,7 +6,9 @@
       </el-aside>
       <el-container>
         <el-header><serchBar /></el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <el-scrollbar> <router-view /></el-scrollbar>
+        </el-main>
         <el-footer> <player /> </el-footer>
       </el-container>
     </el-container>
@@ -28,5 +30,11 @@ import player from "@/components/player/index.vue";
 .el-footer {
   padding: 0rem;
   height: 8rem;
+}
+.el-main {
+  overflow-y: auto;
+}
+.el-scrollbar {
+  height: calc(100vh - 100px - 8rem);
 }
 </style>

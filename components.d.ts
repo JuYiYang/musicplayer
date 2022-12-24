@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    CoverBox: typeof import('./src/components/coverBox/index.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCol: typeof import('element-plus/es')['ElCol']
@@ -44,11 +45,13 @@ declare module '@vue/runtime-core' {
     Player: typeof import('./src/components/player/index.vue')['default']
     ProgressBar: typeof import('./src/components/player/views/ProgressBar.vue')['default']
     QR: typeof import('./src/components/QR/index.vue')['default']
+    RankingItem: typeof import('./src/components/rankingItem/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SeachPop: typeof import('./src/components/serchBar/left/seachPop.vue')['default']
     SerchBar: typeof import('./src/components/serchBar/index.vue')['default']
     SongInfor: typeof import('./src/components/player/views/SongInfor.vue')['default']
+    Subhead: typeof import('./src/components/subhead/index.vue')['default']
     TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     UserRight: typeof import('./src/components/serchBar/userRight/index.vue')['default']
     WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
