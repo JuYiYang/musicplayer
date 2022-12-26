@@ -3,7 +3,7 @@
     <Suspense>
       <template #default>
         <div class="recommend__main">
-          <h1>推荐</h1>
+          <mainHeading>推荐</mainHeading>
           <div class="recommend__bannerWraper">
             <bannerWraper />
           </div>
@@ -29,6 +29,7 @@
 </template>
 
 <script lang="ts" setup>
+import mainHeading from "@/components/mainHeading/index.vue";
 import subhead from "@/components/subhead/index.vue";
 import bannerWraper from "./components/swiperWrapper/index.vue";
 import songCover from "./components/songCover/index.vue";

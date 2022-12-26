@@ -1,6 +1,6 @@
 import { reactive, ref, watch } from "vue";
 
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 
 import {
   CrossRingTwo,
@@ -33,7 +33,7 @@ export const useMenu = () => {
       key: "abc",
       children: [
         { name: "推荐", key: "recommend", icon: CrossRingTwo },
-        { name: "音乐馆", key: "abc", icon: MusicCd },
+        { name: "音乐馆", key: "musicHall", icon: MusicCd },
         { name: "视频", key: "ab", icon: CarouselVideo },
         { name: "电台", key: "bc", icon: Fm },
       ],
@@ -51,15 +51,22 @@ export const useMenu = () => {
   ]);
 
   const click = (key: string) => {
-    currentKey.value = key;
+    router.push({ name: key, replace: true });
   };
+
+  const route = useRoute();
 
   const router = useRouter();
 
   watch(
-    () => currentKey.value,
+    () => route.name,
     () => {
-      router.push(currentKey.value);
+      if (route.meta?.isMenuChildren) return;
+
+      currentKey.value = (route?.name as string) || "";
+    },
+    {
+      immediate: true,
     }
   );
 

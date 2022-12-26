@@ -9,12 +9,27 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: home,
-      redirect: "/recommend",
+      redirect: "recommend",
       children: [
         {
-          path: "/recommend",
+          path: "recommend",
           name: "recommend",
           component: import("@/pages/recommend/index.vue"),
+        },
+        {
+          path: "musicHall",
+          name: "musicHall",
+          component: import("@/pages/musicHall/index.vue"),
+          children: [
+            {
+              path: "handpick",
+              name: "handpick",
+              meta: {
+                isMenuChildren: true,
+              },
+              component: import("@/pages/musicHall/handPick/index.vue"),
+            },
+          ],
         },
       ],
     },
