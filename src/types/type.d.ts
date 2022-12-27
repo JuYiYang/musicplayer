@@ -5,4 +5,7 @@ declare namespace IapiType {
   interface Iapi {
     code: number;
   }
+  interface IResult<T = any> extends Iapi {
+    result: T;
+  }
 }

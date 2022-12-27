@@ -10,7 +10,14 @@
       >
     </el-tabs>
     <div class="musicHall__main">
-      <RouterView></RouterView>
+      <Suspense>
+        <template #default>
+          <RouterView></RouterView>
+        </template>
+        <template #fallback>
+          <span style="color: red">Looding....</span>
+        </template>
+      </Suspense>
     </div>
   </div>
 </template>

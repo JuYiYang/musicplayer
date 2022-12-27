@@ -29,6 +29,14 @@ const router = createRouter({
               },
               component: import("@/pages/musicHall/handPick/index.vue"),
             },
+            {
+              path: "rankList",
+              name: "rankList",
+              meta: {
+                isMenuChildren: true,
+              },
+              component: import("@/pages/musicHall/rankList/index.vue"),
+            },
           ],
         },
       ],

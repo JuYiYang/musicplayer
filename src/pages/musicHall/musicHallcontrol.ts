@@ -9,7 +9,9 @@ type Menus = {
 
 export function useMusicHallMenu() {
   const route = useRoute();
+
   const router = useRouter();
+
   const activeMenuName = ref<string>("");
 
   const menus: Menus[] = [
@@ -40,8 +42,8 @@ export function useMusicHallMenu() {
   ];
 
   const handleMenuClick = ({ paneName }: any) => {
-    router.push({ name: paneName, replace: true });
     // activeMenuName.value = paneName;
+    router.push({ name: paneName, replace: true });
   };
 
   watch(
